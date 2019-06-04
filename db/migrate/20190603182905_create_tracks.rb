@@ -1,0 +1,14 @@
+class CreateTracks < ActiveRecord::Migration[5.2]
+  def change
+    create_table :tracks do |t|
+      t.string :title
+      t.string :artist
+      t.date :date
+      t.integer :duration
+      t.integer :tempo
+      t.integer :key
+
+      t.timestamps
+    end
+  end
+end
