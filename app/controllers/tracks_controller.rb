@@ -1,9 +1,9 @@
-class TracksController < ApplicationController
+class TracksController < OpenReadController
   before_action :set_track, only: [:show, :update, :destroy]
 
   # GET /tracks
   def index
-    @tracks = Track.all
+    @tracks = current_user.tracks.all
 
     render json: @tracks
   end
@@ -15,7 +15,7 @@ class TracksController < ApplicationController
 
   # POST /tracks
   def create
-    @track = Track.new(track_params)
+    @track = current_user.tracks.build(track_params)
 
     if @track.save
       render json: @track, status: :created, location: @track
@@ -39,14 +39,14 @@ class TracksController < ApplicationController
   end
 
   private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_track
+    @track = current_user.tracks.find(params[:id])
+  end
 
-    # Use callbacks to share common setup or constraints between actions.
-    def set_track
-      @track = Track.find(params[:id])
-    end
-
-    # Only allow a trusted parameter "white list" through.
-    def track_params
-      params.require(:track).permit(:title, :artist, :date, :duration, :tempo, :keysig)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def track_params
+    params.require(:track).permit(:title, :artist, :date, :duration,
+                                  :tempo, :keysig)
+  end
 end
