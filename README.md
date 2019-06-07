@@ -49,14 +49,23 @@ Your back-end repo's README should also have
  imgur...
 
  ## A catalog of routes (paths and methods) that the API expects
+
 Home  ------------  /
+
 Sign-up ----------  /sign-up
+
 Sign-in ----------  /sign-in
+
 Sign-out ---------  /sign-out
+
 Change password --  /change-password
+
 Track ------------  /tracks
+
 Create Track -----  /track-create
+
 Track ------------  /tracks/:id
+
 Track Edit -------  /tracks/:id/edit
 
  ## Set up and installation instructions for back end application
