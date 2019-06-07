@@ -17,11 +17,11 @@ that specific track.
 
  ### Project Links
 
-  Front-End Repo: https://github.com/rrbixler/track-chooser-client
-  Back-End Repo: https://github.com/rrbixler/track-chooser-api
+ 1.  [ ]  Front-End Repo: https://github.com/rrbixler/track-chooser-client
+ 1.  [ ]  Back-End Repo: https://github.com/rrbixler/track-chooser-api
 
-  Front-End Deployed Site: https://rrbixler.github.io/track-chooser-client/#/sign-in
-  Back-End: https://shielded-cove-86358.herokuapp.com/
+ 1.  [ ]  Front-End Deployed Site: https://rrbixler.github.io/track-chooser-client/#/sign-in
+ 1.  [ ]  Back-End: https://shielded-cove-86358.herokuapp.com/
 
  ### Technologies Used
 
