@@ -43,10 +43,9 @@ to manually enter information.
 
  One of my problems I ran into: when i originally scaffolded out my resource for tracks, I used "key" as a keyword to reopresent 'key signature' which I eventually had to change to "keysig".  This was creating errors in which the key signature of the song (represented as a number) was being read by the console as the actual data key for the track and not the representation of the key signature.
 
-Your back-end repo's README should also have
-
  ## Link to Entity Relationship Diagram (ERD)
- imgur...
+ 
+https://imgur.com/8WJfsUE
 
  ## A catalog of routes (paths and methods) that the API expects
 
