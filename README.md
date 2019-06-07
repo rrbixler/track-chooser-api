@@ -44,7 +44,7 @@ to manually enter information.
  One of my problems I ran into: when i originally scaffolded out my resource for tracks, I used "key" as a keyword to reopresent 'key signature' which I eventually had to change to "keysig".  This was creating errors in which the key signature of the song (represented as a number) was being read by the console as the actual data key for the track and not the representation of the key signature.
 
  ## Link to Entity Relationship Diagram (ERD)
- 
+
 https://imgur.com/8WJfsUE
 
  ## A catalog of routes (paths and methods) that the API expects
@@ -68,4 +68,18 @@ Track ------------  /tracks/:id
 Track Edit -------  /tracks/:id/edit
 
  ## Set up and installation instructions for back end application
- Just sign up in the front end and the API will be fully functional
+ 
+ 1.  Fork and clone this repository.
+ 1.  Change into the new directory.
+ 1.  Install dependencies with `bundle install`.
+ 1.  `git add` and `git commit` your changes.
+ 1.  Create a `.env` for sensitive settings (`touch .env`).
+ 1.  Generate new `development` and `test` secrets (`bundle exec rails secret`).
+ 1.  Store them in `.env` with keys `SECRET_KEY_BASE_<DEVELOPMENT|TEST>`
+     respectively.
+ 1.  In order to make requests to your deployed API, you will need to set
+     `SECRET_KEY_BASE` in the environment of the production API (for example, using `heroku config:set` or the Heroku dashboard).
+ 1.  In order to make requests from your deployed client application, you will
+     need to set `CLIENT_ORIGIN` in the environment of the production API (for example, `heroku config:set CLIENT_ORIGIN=https://<github-username>.github.io`).
+     See more about deploying to heroku [rails-heroku-setup-guide]
+ 1.  Run the API server with `bin/rails server`
